@@ -1,7 +1,9 @@
 #!/bin/bash
+clear
 sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/9fe45dc46b6f31a1ce67bcde151878a33ef090f6/logo.sh | bash && sleep 1
-sudo apt update & sudo apt upgrade -y
-
+rm -rf logo.sh
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt install ca-certificates zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev curl git wget make jq build-essential pkg-config lsb-release libssl-dev libreadline-dev libffi-dev gcc screen unzip lz4 mc -y
 sudo apt install python3 -y
 python3 --version
@@ -19,6 +21,10 @@ docker-compose --version
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
+clear
+sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/9fe45dc46b6f31a1ce67bcde151878a33ef090f6/logo.sh | bash && sleep 1
+rm -rf logo.sh
+
 echo "Докер установлен!"
 echo "Устанавливаем ГО!"
 sudo rm -rf /usr/local/go
@@ -34,7 +40,10 @@ git clone https://github.com/allora-network/allora-huggingface-walkthrough
 cd allora-huggingface-walkthrough
 mkdir -p worker-data
 chmod -R 777 worker-data
-echo "Все стоит"
+
+clear
+sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/9fe45dc46b6f31a1ce67bcde151878a33ef090f6/logo.sh | bash && sleep 1
+rm -rf logo.sh
 
 read -p "Введите вашу Seed Phrase: " seed_phrase
 cat <<EOF > config.json
@@ -48,7 +57,7 @@ cat <<EOF > config.json
        "nodeRpc": "https://rpc.ankr.com/allora_testnet/346523bda5e3a75f4d1cefd2625a08116d831c30a1aa4e5eb436823e7af771dd",
        "maxRetries": 1,
        "delay": 1,
-       "submitTx": false
+       "submitTx": true
    },
    "worker": [
        {
