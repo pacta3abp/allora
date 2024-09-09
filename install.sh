@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/9fe45dc46b6f31a1ce67bcde151878a33ef090f6/logo.sh | bash && sleep 1
+sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/main/logo.sh | bash && sleep 1
 rm -rf logo.sh
 sudo apt update -y
 sudo apt upgrade -y
@@ -22,7 +22,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 clear
-sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/9fe45dc46b6f31a1ce67bcde151878a33ef090f6/logo.sh | bash && sleep 1
+sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/main/logo.sh | bash && sleep 1
 rm -rf logo.sh
 
 echo "Докер установлен!"
@@ -42,7 +42,7 @@ mkdir -p worker-data
 chmod -R 777 worker-data
 
 clear
-sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/9fe45dc46b6f31a1ce67bcde151878a33ef090f6/logo.sh | bash && sleep 1
+sleep 1 && curl -s https://raw.githubusercontent.com/pacta3abp/logo/main/logo.sh | bash && sleep 1
 rm -rf logo.sh
 
 read -p "Введите вашу Seed Phrase: " seed_phrase
